@@ -1,0 +1,11 @@
+.description {
+	padding-bottom: 16px;
+
+	&__intro {
+		margin-bottom: 40px;
+
+		@media (max-width: $mobileSize) {
+			margin-bottom: 30px;
+		}
+	}
+}

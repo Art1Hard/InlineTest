@@ -1,0 +1,12 @@
+.header {
+	padding-top: 16px;
+	margin-bottom: 50px;
+
+	@media (max-width: $mobileSize) {
+		margin-bottom: 25px;
+	}
+
+	&__nav {
+		border-bottom: 1px solid $underlineColor;
+	}
+}

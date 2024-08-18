@@ -1,0 +1,75 @@
+.nav {
+	&__list {
+		display: flex;
+		justify-content: center;
+		column-gap: 90px;
+		margin-bottom: 1px;
+
+		@media (max-width: $mobileSize) {
+			column-gap: 50px;
+			margin-bottom: -2px;
+		}
+
+		@media (max-width: $smallMobileSize) {
+			column-gap: 30px;
+		}
+
+		li {
+			padding-bottom: 19px;
+			@media (max-width: $mobileSize) {
+				padding-bottom: 5px;
+			}
+		}
+	}
+
+	&__item {
+		font-size: 16px;
+		color: $primaryColor;
+		font-weight: $mediumWeight;
+		text-transform: uppercase;
+
+		position: relative;
+		padding: 0 7px;
+		padding-bottom: 19px;
+
+		@media (max-width: $mobileSize) {
+			font-size: 15px;
+			padding: 0;
+			padding-bottom: 5px;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			z-index: 1;
+
+			width: 0;
+			transition: width 0.2s ease-in-out;
+
+			height: 5px;
+			background-color: $accentColor;
+			border-radius: 5px;
+
+			@media (max-width: $mobileSize) {
+				height: 3px;
+			}
+		}
+
+		&--active {
+			font-weight: $semiBoldWeight;
+
+			&::after {
+				width: 100%;
+			}
+		}
+
+		&:hover {
+			&::after {
+				left: 0;
+				width: 100%;
+			}
+		}
+	}
+}

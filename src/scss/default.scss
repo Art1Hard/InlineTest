@@ -1,0 +1,15 @@
+body {
+	font-family: $primaryFamily;
+	color: $primaryColor;
+	font-size: 14px;
+}
+
+.container {
+	max-width: 1068px + $containerPaddingLR * 2;
+	margin: 0 auto;
+	padding: 0 $containerPaddingLR;
+}
+
+svg {
+	display: flex;
+}

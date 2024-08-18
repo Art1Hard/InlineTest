@@ -1,0 +1,22 @@
+.intro {
+	&__text {
+		line-height: 1.4;
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+
+		@media (max-width: $mobileSize) {
+			margin-bottom: 0;
+
+			&:not(:first-child) {
+				display: none;
+			}
+
+			span {
+				display: block;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
