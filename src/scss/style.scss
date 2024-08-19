@@ -6,11 +6,13 @@
 //* Import components
 @import "./components/nav";
 @import "./components/header";
-@import "./components/intro";
 @import "./components/tablet";
 @import "./components/product-cart.scss";
 
 //* Import chapters
 @import "./chapters/description";
+@import "./chapters/description/intro";
 @import "./chapters/description/feature";
 @import "./chapters/description/products";
+@import "./chapters/comments";
+@import "./chapters/location";

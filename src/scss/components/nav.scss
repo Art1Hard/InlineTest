@@ -45,15 +45,23 @@
 			right: 0;
 			z-index: 1;
 
-			width: 0;
-			transition: width 0.2s ease-in-out;
+			width: 100%;
+			height: 0px;
+			transition: height 0.15s ease-in-out;
 
-			height: 5px;
 			background-color: $accentColor;
 			border-radius: 5px;
+		}
 
-			@media (max-width: $mobileSize) {
-				height: 3px;
+		&:hover {
+			&::after {
+				height: 5px;
+				@media (max-width: $mobileSize) {
+					height: 3px;
+				}
+				@media (hover: none) and (pointer: coarse) {
+					height: 0;
+				}
 			}
 		}
 
@@ -61,14 +69,19 @@
 			font-weight: $semiBoldWeight;
 
 			&::after {
-				width: 100%;
+				height: 5px;
+				@media (max-width: $mobileSize) {
+					height: 3px;
+				}
 			}
-		}
 
-		&:hover {
-			&::after {
-				left: 0;
-				width: 100%;
+			&:hover {
+				&::after {
+					height: 5px;
+					@media (max-width: $mobileSize) {
+						height: 3px;
+					}
+				}
 			}
 		}
 	}

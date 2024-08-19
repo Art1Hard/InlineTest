@@ -40,8 +40,15 @@
 			width: 20px;
 			height: 20px;
 
-			fill: none;
+			fill: transparent;
 			stroke: $secondlyColor;
+		}
+
+		&--active {
+			svg {
+				fill: #ff3131;
+				stroke: #ff3131;
+			}
 		}
 	}
 

@@ -2,12 +2,22 @@
 	&__text {
 		line-height: 1.4;
 
+		b {
+			font-weight: normal;
+
+			@media (max-width: $mobileSize) {
+				font-weight: $mediumWeight;
+			}
+		}
+
 		&:not(:last-child) {
 			margin-bottom: 20px;
 		}
 
 		@media (max-width: $mobileSize) {
 			margin-bottom: 0;
+
+			text-align: justify;
 
 			&:not(:first-child) {
 				display: none;

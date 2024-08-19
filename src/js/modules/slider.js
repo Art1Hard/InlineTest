@@ -1,8 +1,10 @@
 import Swiper from "swiper";
 import "swiper/scss";
 
+export let slider;
+
 const initSlider = () => {
-	const slider = new Swiper("#slider", {
+	slider = new Swiper("#slider", {
 		slidesPerView: "auto",
 		spaceBetween: 16,
 		breakpoints: {
